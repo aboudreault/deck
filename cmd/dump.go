@@ -167,4 +167,6 @@ func init() {
 		false, "export only the RBAC resources (Kong Enterprise only).")
 	dumpCmd.Flags().BoolVar(&assumeYes, "yes",
 		false, "assume 'yes' to prompts and run non-interactively.")
+	dumpCmd.Flags().BoolVar(&dumpConfig.DedupPluginsConfig, "dedup-plugin-configs",
+		false, "deduplicate plugins with same configuration.")
 }
