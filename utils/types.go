@@ -50,8 +50,10 @@ type KongRawState struct {
 	RBACRoles               []*kong.RBACRole
 	RBACEndpointPermissions []*kong.RBACEndpointPermission
 
-	SharedPluginMap map[string]map[string]SharedPlugin
+	SharedPluginsMap map[string]SharedPlugins
 }
+
+type SharedPlugins map[string]SharedPlugin
 
 type SharedPlugin struct {
 	Config    kong.Configuration
